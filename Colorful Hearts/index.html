@@ -7,7 +7,18 @@
     <link rel="stylesheet" href="style.css">
     <title>Colorful Hearts</title>
 </head>
-<body>
-    
-</body>
+<body>s</body>
+<script>
+    document.addEventListener("mousemove", (e)=> {
+        let body = document.querySelector("body")
+        let heart = document.createElement("span")
+        console.log(e)
+        let x =e.offsetXY
+        let y = e.offsetY
+        heart.style.left= x+"px";
+        heart.style.top= y+"px";
+        body.appendChild(heart)
+
+    })
+</script>
 </html>
