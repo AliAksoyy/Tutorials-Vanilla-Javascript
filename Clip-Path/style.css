@@ -19,7 +19,7 @@ section {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    clip-path:circle(0px at center)
+    clip-path:circle(0px at center);
     
 }
 
