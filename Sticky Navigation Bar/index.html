@@ -20,5 +20,15 @@
         </ul>
        </header> 
        <section class="banner"></section>
+       <script >
+       console.log(window)
+        window.addEventListener("scroll", ()=> {
+
+            let header = document.querySelector("header")
+            console.log(header)
+            header.classList.toggle("sticky", window.scrollY >0)
+        })
+        
+       </script>
 </body>
 </html>
