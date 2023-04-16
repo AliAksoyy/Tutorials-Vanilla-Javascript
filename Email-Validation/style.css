@@ -45,5 +45,14 @@ h3 {
 }
 
 #form #inputBox {
-    
+    position: relative;
+}
+
+#text {
+    display: block;
+    color:#000;
+    font-weight: 300;
+    font-style: italic;
+    padding: 5px;
+    margin-top: 10rem;
 }
