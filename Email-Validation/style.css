@@ -8,14 +8,13 @@
 
 }
 
-html {
-    height: 100%;
-}
+
 
 body {
-    height: 100%;
-    display: grid;
-    place-items: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #373737;
 }
 
@@ -33,7 +32,7 @@ h3 {
 }
 
 #form #email {
-    position: absolute;
+  
     width: 300px;
     background:#292929;
     outline: none;
@@ -54,5 +53,25 @@ h3 {
     font-weight: 300;
     font-style: italic;
     padding: 5px;
-    margin-top: 10rem;
+}
+
+#form.invalid .inputBox:before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 16px;
+    height: 20px;
+    width  : 20px;
+    border-radius: 50%;
+    background: #fa0000;
+}
+#form.valid .inputBox:before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 16px;
+    height: 20px;
+    width  : 20px;
+    border-radius: 50%;
+    background: #11d81b;
 }

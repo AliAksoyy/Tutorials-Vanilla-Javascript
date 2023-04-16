@@ -12,15 +12,15 @@ let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
   if (email.match(pattern)) {
     form.classList.add("valid");
     form.classList.remove("invalid");
-    text.innerHTML="Your Email Address inValid"
+    text.innerHTML="Your Email Address in Valid"
     text.style.color="#00ff00"
   } else {
     form.classList.remove("valid");
     form.classList.add("invalid");
-     text.innerHTML = "Your Email Address Valid";
+     text.innerHTML = "Please enter valid email";
      text.style.color = "#ff0000";
   }
-  if(email.value === ""){
+  if(email.value == ""){
     form.classList.remove("valid");
     form.classList.remove("invalid");
      text.innerHTML = "";
