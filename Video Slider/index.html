@@ -12,13 +12,15 @@
         <video id="slider" autoplay loop muted>
             <source src="video1.mp4" type="video/mp4">
         </video>
-        <!-- <video id="slider" autoplay loop muted>
-            <source src="video2.mp4" type="video/mp4">
-        </video> -->
         <ul class="navigation">
-            <li><img src="thumb1.png" alt="1"></li>
-            <li><img src="thumb2.png" alt="2"></li>
+            <li onclick="videoUrl('video1.mp4')"><img src="./thumb1.png" alt="1"></li>
+            <li onclick="videoUrl('video2.mp4')"><img src="thumb2.png" alt="2"></li>
         </ul>
     </section>
+    <script>
+        let videoUrl=function(hmmm) {
+          document.getElementById("slider").src=hmmm
+        }
+    </script>
 </body>
 </html>
