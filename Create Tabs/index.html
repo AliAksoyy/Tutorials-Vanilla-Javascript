@@ -10,21 +10,21 @@
 <body>
     <div class="container">
         <div class="icon">
-            <div class="iconBx">
-                <img src="./img1.png" alt="1">
+            <div class="iconBx active" data-id="content1">
+                <img src="./img1.png" alt="1"  >
             </div>
-            <div class="iconBx">
-                <img src="./img2.png" alt="2">
+            <div class="iconBx" data-id="content2">
+                <img src="./img2.png" alt="2" >
             </div>
-            <div class="iconBx">
-                <img src="./img3.png" alt="3">
+            <div class="iconBx" data-id="content3">
+                <img src="./img3.png" alt="3" >
             </div>
-            <div class="iconBx">
-                <img src="./img4.png" alt="4">
+            <div class="iconBx" data-id="content4">
+                <img src="./img4.png" alt="4" >
             </div>
         </div>
         <div class="content">
-            <div class="contentBx">
+            <div class="contentBx active" id="content1">
                 <div>
                     <div class="text">
                         <h2>Google Text</h2>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </div>
-            <div class="contentBx">
+            <div class="contentBx" id="content2">
                 <div>
                     <div class="text">
                         <h2>FaceBook Text</h2>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            <div class="contentBx">
+            <div class="contentBx" id="content3">
                 <div>
                     <div class="text">
                         <h2>Twitter Text</h2>
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="contentBx">
+            <div class="contentBx" id="content4">
                 <div>
                     <div class="text">
                         <h2>Yahoo Text</h2>
@@ -58,5 +58,19 @@
             </div>
         </div>
     </div>
+    <script>
+        let iconBx=document.querySelectorAll(".iconBx")
+        let contentBx=document.querySelectorAll(".contentBx")
+        for(let i=0; i<iconBx.length; i++){
+            iconBx[i].addEventListener("mouseover",()=> {
+                for(let i=0; i<contentBx.length; i++){
+                    contentBx[i].className="contentBx";
+                }
+                document.getElementById(this?.dataset?.id).className="contentBx active"
+            })
+        }
+        
+        console.log(iconBx)
+    </script>
 </body>
 </html>
